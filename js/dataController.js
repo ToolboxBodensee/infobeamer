@@ -8,8 +8,6 @@ angular.module('infoDisplay').controller('DataController', function (
 {
 	$scope.entries = [];
 
-	$scope.entries = [1, 2, 3];
-
 	$scope.loadData = function()
 	{
 		var p = new Promise(function(resolve, reject)
@@ -22,9 +20,9 @@ angular.module('infoDisplay').controller('DataController', function (
 		return p;
 	};
 
-
 	$scope.loadData().then(function()
 	{
 		initHeaders();
 	});
 });
+
